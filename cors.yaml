@@ -1,0 +1,15 @@
+enabled: true
+routes:
+  - '*'
+origins:
+  - '*'
+methods:
+  - OPTIONS
+  - GET
+  - HEAD
+  - POST
+  - PUT
+  - DELETE
+  - TRACE
+  - CONNECT
+credentials: false
