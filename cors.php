@@ -2,8 +2,6 @@
 namespace Grav\Plugin;
 
 use Grav\Common\Plugin;
-use Grav\Common\Uri;
-use RocketTheme\Toolbox\Event\Event;
 
 class CorsPlugin extends Plugin
 {
@@ -40,7 +38,7 @@ class CorsPlugin extends Plugin
             $this->active = true;
         }
 
-        $uri = $this->grav['uri'];
+        $uri = isset($_SERVER['REQUEST_URI']) ? $_SERVER['REQUEST_URI'] : '';
 
         foreach ($routes as $route) {
             if ($route === '*') {
@@ -48,8 +46,7 @@ class CorsPlugin extends Plugin
                 break;
             }
 
-            $route = strtr(preg_quote($route, '#'), array('\*' => '.*', '\?' => '.'));
-            if (preg_match('#^' . $route . '$#i', $uri->path())) {
+            if (@preg_match('#' . $route . '#i', $uri)) {
                 $this->active = true;
                 break;
             }
