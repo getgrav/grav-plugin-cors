@@ -36,21 +36,21 @@ If you need to change any value, then the best process is to copy the [cors.yaml
 
 ## Settings
 
-#### Routes
+### Routes
 
 One ore more **relative** URIs, matching any of the  site routes. This can be a full route (`/blog/entry`) or even a regex (`/blog/*`). With a regex you can also do partial matches (`*blog*`).
 
 To make the whole site available for CORS, set the Route value to `*` (wildcard).
 
-#### Allow Origin
+### Allow Origin
 
 The origin specifies one or multiple URI that may access the site. You might specify `*` as a wildcard, allowing any origin to access the site.
 
-#### Allow Methods
+### Allow Methods
 
 The method or methods allowed when accessing the site.
 
-#### Expose Headers
+### Expose Headers
 
 This setting allows to whitelist headers that browsers are allowed to access. For example:
 
@@ -71,7 +71,7 @@ The `XMLHttpRequest 2` object has a `getResponseHeader()` method that returns th
 
 If you want clients to be able to access other headers, you have to specify them through this setting.
 
-#### Allow Credentials
+### Allow Credentials
 
 By default, cookies are not included in CORS requests. By enabling this setting, cookies will be included in CORS requests. If you don't need cookies, don't enable this option.
 
