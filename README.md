@@ -38,7 +38,9 @@ If you need to change any value, then the best process is to copy the [cors.yaml
 
 ### Routes
 
-One ore more **relative** URIs, matching any of the  site routes. This can be a full route (`/blog/entry`) or even a regex (`/blog/*`). With a regex you can also do partial matches (`*blog*`).
+One ore more **relative** URIs, matching any of the  site routes. This can be a full route (`/blog/entry`).
+
+Routes are always interpreted as regular expressions, which allows for routes like `/blog/*` or even more complex ones such as `^/.*\.json(\?\d{1,})?$` (**/some-url.json?1470810103393**).
 
 To make the whole site available for CORS, set the Route value to `*` (wildcard).
 
