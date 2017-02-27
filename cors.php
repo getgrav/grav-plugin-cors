@@ -53,12 +53,18 @@ class CorsPlugin extends Plugin
         }
 
         if ($this->active) {
-            $origin = isset($_SERVER['HTTP_ORIGIN']) ? $_SERVER['HTTP_ORIGIN'] : false;
-            if (in_array('*', $origins)) { $origin = '*'; }
+            if (in_array('*', $origins)) {
+                $origin = '*';
+            } else {
+                $origin = isset($_SERVER['HTTP_ORIGIN']) ? $_SERVER['HTTP_ORIGIN'] : false;
 
-            if (in_array($origin, $origins)) {
-                header("Access-Control-Allow-Origin: ${origin}");
+                if (!$origin || !in_array($origin, $origins)) {
+                    // Origin header doesn't match to the allowed origins: CORS not allowed.
+                    return;
+                }
             }
+
+            header("Access-Control-Allow-Origin: ${origin}");
 
             if (count($methods)) {
                 header("Access-Control-Allow-Methods: " . implode(', ', $methods));

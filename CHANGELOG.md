@@ -1,3 +1,9 @@
+# v1.0.2
+## xx/xx/2017
+
+1. [](#bugfix)
+    * Fixed plugin sending partial CORS headers if Origin didn't match to the configuration
+
 # v1.0.1
 ## 09/09/2016
 
