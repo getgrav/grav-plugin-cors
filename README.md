@@ -19,6 +19,7 @@ enabled: true
 routes:
   - '*'
 origins:
+allowHeaders: []
   - '*'
 methods:
   - OPTIONS
@@ -51,6 +52,10 @@ The origin specifies one or multiple URI that may access the site. You might spe
 ### Allow Methods
 
 The method or methods allowed when accessing the site.
+
+### Allow Headers
+
+The headers allowed when accessing the site.
 
 ### Expose Headers
 
