@@ -61,6 +61,15 @@ form:
       validate:
           type: commalist
 
+    allowHeaders:
+      type: array
+      label: Allow Headers
+      size: large
+      help: "Allow the server to receive the specified headers. For example: content-type"
+      default: []
+      value_only: true
+      placeholder_value: content-type
+
     expose:
       type: array
       label: Expose Headers
