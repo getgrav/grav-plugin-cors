@@ -1,3 +1,9 @@
+# v1.0.2
+## 08/24/2019
+
+1. [](#improved)
+    * Add 'Allow Headers' option
+
 # v1.0.1
 ## 09/09/2016
 
