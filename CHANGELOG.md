@@ -1,6 +1,8 @@
 # v1.0.2
-## xx/xx/2017
+## 08/26/2019
 
+1. [](#improved)
+    * Add 'Allow Headers' option
 1. [](#bugfix)
     * Fixed plugin sending partial CORS headers if Origin didn't match to the configuration
 

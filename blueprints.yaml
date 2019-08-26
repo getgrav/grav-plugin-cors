@@ -1,5 +1,5 @@
 name: CORS
-version: 1.0.1
+version: 1.0.2
 description: Enables and allows to manage CORS (Cross-Origin Resource Sharing) in Grav
 icon: universal-access
 author:
@@ -60,6 +60,15 @@ form:
         CONNECT: CONNECT
       validate:
           type: commalist
+
+    allowHeaders:
+      type: array
+      label: Allow Headers
+      size: large
+      help: "Allow the server to receive the specified headers. For example: content-type"
+      default: []
+      value_only: true
+      placeholder_value: content-type
 
     expose:
       type: array
