@@ -82,7 +82,7 @@ form:
     credentials:
       type: toggle
       label: Allow Credentials
-      help: "The server can give permission to include cookies by enabling this option. When enabledan `Access-Control-Allow-Credentials` header will be set. Setting this response header to true means that the server allows cookies (or other user credentials) to be included on cross-origin requests."
+      help: "The server can give permission to include cookies by enabling this option. When enabled, `Access-Control-Allow-Credentials` header will be set. Setting this response header to true means that the server allows cookies (or other user credentials) to be included on cross-origin requests."
       highlight: 1
       default: 0
       options:
