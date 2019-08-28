@@ -1,3 +1,9 @@
+# v1.0.3
+## 08/28/2019
+
+1. [](#improved)
+    * Add option to manage preflight requests
+
 # v1.0.2
 ## 08/26/2019
 

@@ -13,3 +13,4 @@ methods:
   - TRACE
   - CONNECT
 credentials: false
+managePreflight: false
