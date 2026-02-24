@@ -34,6 +34,13 @@ class CorsPlugin extends Plugin
         $allowHeaders = (array)$this->config->get('plugins.cors.allowHeaders');
         $expose = (array) $this->config->get('plugins.cors.expose');
         $credentials = $this->config->get('plugins.cors.credentials');
+        $managePreflight = $this->config->get('plugins.cors.managePreflight');
+
+        if ($managePreflight) {
+            $this->enable([
+                'onPageNotFound' => ['onPageNotFound', 1],
+            ]);
+        }
 
         if (!count($routes) || in_array('*', $routes)) {
             $this->active = true;
@@ -82,6 +89,14 @@ class CorsPlugin extends Plugin
             if ($credentials) {
                 header('Access-Control-Allow-Credentials: true');
             }
+        }
+    }
+
+    public function onPageNotFound()
+    {
+        if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
+            // Headers are already added.
+            exit(0);
         }
     }
 }

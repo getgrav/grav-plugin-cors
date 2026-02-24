@@ -1,5 +1,5 @@
 name: CORS
-version: 1.0.2
+version: 1.0.3
 description: Enables and allows to manage CORS (Cross-Origin Resource Sharing) in Grav
 icon: universal-access
 author:
@@ -82,7 +82,19 @@ form:
     credentials:
       type: toggle
       label: Allow Credentials
-      help: "The server can give permission to include cookies by enabling this option. When enabledan `Access-Control-Allow-Credentials` header will be set. Setting this response header to true means that the server allows cookies (or other user credentials) to be included on cross-origin requests."
+      help: "The server can give permission to include cookies by enabling this option. When enabled, `Access-Control-Allow-Credentials` header will be set. Setting this response header to true means that the server allows cookies (or other user credentials) to be included on cross-origin requests."
+      highlight: 1
+      default: 0
+      options:
+        1: PLUGIN_ADMIN.ENABLED
+        0: PLUGIN_ADMIN.DISABLED
+      validate:
+        type: bool
+
+    managePreflight:
+      type: toggle
+      label: Manage Preflight Requests
+      help: "The server can automatically respond to preflight requests (HTTP method => OPTIONS)."
       highlight: 1
       default: 0
       options:
