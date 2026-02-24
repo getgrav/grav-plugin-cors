@@ -65,7 +65,7 @@ class CorsPlugin extends Plugin
                 }
             }
 
-            header("Access-Control-Allow-Origin: ${origin}");
+            header("Access-Control-Allow-Origin: {$origin}");
 
             if (count($methods)) {
                 header("Access-Control-Allow-Methods: " . implode(', ', $methods));
