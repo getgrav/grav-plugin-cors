@@ -1,3 +1,10 @@
+# v1.0.3
+## 04/29/2026
+
+1. [](#bugfix)
+    * Fixed PHP 8.2+ deprecation notice for `${var}` string interpolation syntax
+    * Fixed PHP 8.1+ deprecation notice — explicit string casts where `null` was being passed to string-typed function arguments.
+
 # v1.0.2
 ## 08/26/2019
 
