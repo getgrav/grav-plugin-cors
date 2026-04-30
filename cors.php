@@ -47,7 +47,7 @@ class CorsPlugin extends Plugin
                 break;
             }
 
-            if (@preg_match('#' . $route . '#i', $uri)) {
+            if (@preg_match('#' . $route . '#i', (string) $uri)) {
                 $this->active = true;
                 break;
             }
@@ -65,7 +65,7 @@ class CorsPlugin extends Plugin
                 }
             }
 
-            header("Access-Control-Allow-Origin: ${origin}");
+            header("Access-Control-Allow-Origin: {$origin}");
 
             if (count($methods)) {
                 header("Access-Control-Allow-Methods: " . implode(', ', $methods));

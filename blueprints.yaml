@@ -1,5 +1,5 @@
 name: CORS
-version: 1.0.2
+version: 1.0.3
 description: Enables and allows to manage CORS (Cross-Origin Resource Sharing) in Grav
 icon: universal-access
 author:
@@ -10,6 +10,9 @@ homepage: https://github.com/getgrav/grav-plugin-cors
 keywords: cors, api, cross, origin, resource, sharing
 bugs: https://github.com/getgrav/grav-plugin-cors/issues
 license: MIT
+
+compatibility:
+  grav: ['1.7', '2.0']
 
 form:
   validation: strict
